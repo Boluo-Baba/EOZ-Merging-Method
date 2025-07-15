@@ -7,6 +7,10 @@ import numpy as np
 from shiny import reactive, render
 from shiny.express import input, ui
 from shinywidgets import render_plotly
+import matplotlib.pyplot as plt
+import math
+import matplotlib.colors as colors
+import seaborn as sns
 
 class Patient:
     def __init__(self, path__, file):
