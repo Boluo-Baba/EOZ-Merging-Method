@@ -49,28 +49,7 @@ with ui.layout_columns(fill=False):
         def total_tippers():
             tips_data().shape[0]
 
-    with ui.value_box(showcase=ICONS["wallet"]):
-        "Average tip"
-
-        @render.express
-        def average_tip():
-            d = tips_data()
-            if d.shape[0] > 0:
-                perc = d.tip / d.total_bill
-                f"{perc.mean():.1%}"
-
-    with ui.value_box(showcase=ICONS["currency-dollar"]):
-        "Average bill"
-
-        @render.express
-        def average_bill():
-            d = tips_data()
-            if d.shape[0] > 0:
-                bill = d.total_bill.mean()
-                f"${bill:.2f}"
-
-
-with ui.layout_columns(col_widths=[12]):
+with ui.layout_columns(col_widths=[12], fill=False):
 
     with ui.card(full_screen=True):
         with ui.card_header(class_="d-flex justify-content-between align-items-center"):
