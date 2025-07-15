@@ -9,7 +9,7 @@ from shiny.express import input, ui
 from shinywidgets import render_plotly
 
 tips = pd.read_csv("data/tips.csv")
-data = pd.read_csv("data/Li_Minfeng_OD_27032023_094446_CUR.csv", sep=';', encoding='iso-8859-1').set_index('FRONT').iloc[:, :-1].iloc[:140, 2:]
+data = pd.read_csv("data/Li_Minfeng_OD_27032023_094446_CUR.CSV", sep=';', encoding='iso-8859-1').set_index('FRONT').iloc[:, :-1].iloc[:140, 2:]
 ui.include_css("styles.css")
 
 bill_rng = (min(tips.total_bill), max(tips.total_bill))
