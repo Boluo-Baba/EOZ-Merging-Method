@@ -6,5 +6,4 @@ pandas
 ridgeplot
 numpy
 matplotlib
-math
 seaborn
