@@ -422,7 +422,9 @@ with ui.layout_columns(col_widths=[6], fill=False):
             plt.yticks(np.arange(0,121,20), np.arange(-6, 7, 2))
             plt.grid(True, color='grey', linestyle='--', alpha=0.5)
             plt.colorbar()
-
+            
+            return fig
+            
             # return px.scatter(
             #     tips_data(),
             #     x="total_bill",
