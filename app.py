@@ -388,32 +388,32 @@ ICONS = {
     "ellipsis": fa.icon_svg("ellipsis"),
 }
 
-with ui.layout_columns(col_widths=[6, 3, 3, 3, 3], fill=False):
-    with ui.value_box(showcase=ICONS["user"]):
-        "Total tippers"
-        @render.express
-        def total_tippers():
-            2333
+with ui.layout_columns(col_widths=[3, 3, 3, 3], fill=False):
+    # with ui.value_box(showcase=ICONS["user"]):
+    #     "Total tippers"
+    #     @render.express
+    #     def total_tippers():
+    #         2333
             
-    with ui.value_box():
+    with ui.value_box(fill=False):
         "angle1"
         @render.express
         def total_tippers():
             a.two_point_angle
             
-    with ui.value_box():
+    with ui.value_box(fill=False):
         "k1"
         @render.express
         def total_tippers():
             a.two_point_mean_max
             
-    with ui.value_box():
+    with ui.value_box(fill=False):
         "angle2"
         @render.express
         def total_tippers():
             a.two_point_pend_angle
             
-    with ui.value_box():
+    with ui.value_box(fill=False):
         "k2"
         @render.express
         def total_tippers():
