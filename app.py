@@ -414,19 +414,18 @@ with ui.layout_columns(col_widths=[6], fill=False):
         def scatterplot():
             color = input.scatter_color()
 
-            # z = np.random.randn(10, 12)
-            # fig = px.imshow(z, color_continuous_scale="Viridis")
-            # return fig
+            fig = px.imshow(a.data.iloc[10: -9, 8: -10], color_continuous_scale="Viridis")
+            return fig
             
-            fig, ax = plt.subplots(figsize=(6, 4))
-            plt.imshow(a.data.iloc[10: -9, 8: -10], cmap=cmap, interpolation='nearest', vmin=32, vmax=47,)
-            plt.xticks(np.arange(0,121,20), np.arange(-6, 7, 2))
-            plt.yticks(np.arange(0,121,20), np.arange(-6, 7, 2))
-            plt.grid(True, color='grey', linestyle='--', alpha=0.5)
-            plt.colorbar()
+            # fig, ax = plt.subplots(figsize=(6, 4))
+            # plt.imshow(a.data.iloc[10: -9, 8: -10], cmap=cmap, interpolation='nearest', vmin=32, vmax=47,)
+            # plt.xticks(np.arange(0,121,20), np.arange(-6, 7, 2))
+            # plt.yticks(np.arange(0,121,20), np.arange(-6, 7, 2))
+            # plt.grid(True, color='grey', linestyle='--', alpha=0.5)
+            # plt.colorbar()
 
-            fig_plotly = tls.mpl_to_plotly(fig)
-            return fig_plotly
+            # fig_plotly = tls.mpl_to_plotly(fig)
+            # return fig_plotly
             
             # return px.scatter(
             #     tips_data(),
