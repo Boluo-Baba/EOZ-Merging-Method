@@ -414,7 +414,8 @@ with ui.layout_columns(col_widths=[6], fill=False):
         def scatterplot():
             color = input.scatter_color()
 
-            fig = px.imshow(a.data.iloc[10: -9, 8: -10], color_continuous_scale="Viridis")
+            z = [[1, 2, 3], [4, 5, 6]]
+            fig = px.imshow(z, color_continuous_scale="Viridis")
             return fig
             
             # fig, ax = plt.subplots(figsize=(6, 4))
