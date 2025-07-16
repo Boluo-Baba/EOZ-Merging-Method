@@ -424,20 +424,13 @@ with ui.layout_columns(col_widths=[6], fill=False):
     with ui.card(full_screen=True):
         with ui.card_header(class_="d-flex justify-content-between align-items-center"):
             "Total bill vs tip"
-            with ui.popover(title="Add a color variable", placement="top"):
-                ICONS["ellipsis"]
-                ui.input_radio_buttons(
-                    "scatter_color",
-                    None,
-                    ["none", "sex", "smoker", "day", "time"],
-                    inline=True,
-                )
 
         @render_plotly
         def scatterplot():
             color = input.scatter_color()
 
-            fig = px.imshow(a.data.fillna(0).iloc[10: -9, 8: -10].values.tolist())#, color_continuous_scale="Viridis")
+            z = [[1, 2, 3, ], [4, 5, 6]]
+            fig = px.imshow(z)#a.data.fillna(0).iloc[10: -9, 8: -10].values.tolist())#, color_continuous_scale="Viridis")
             return fig
             
             # fig, ax = plt.subplots(figsize=(6, 4))
