@@ -391,20 +391,30 @@ ICONS = {
 with ui.layout_columns(col_widths=[6, 3, 3, 3, 3], fill=False):
     with ui.value_box(showcase=ICONS["user"]):
         "Total tippers"
-
         @render.express
         def total_tippers():
             2333
-
+            
+    with ui.value_box():
+        "angle1"
         @render.express
         def total_tippers():
             a.two_point_angle
+            
+    with ui.value_box():
+        "k1"
         @render.express
         def total_tippers():
             a.two_point_mean_max
+            
+    with ui.value_box():
+        "angle2"
         @render.express
         def total_tippers():
             a.two_point_pend_angle
+            
+    with ui.value_box():
+        "k2"
         @render.express
         def total_tippers():
             a.two_point_pend_mean
